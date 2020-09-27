@@ -40,5 +40,12 @@ namespace MyTestApi.Controllers
         {
             return new string[] { "MES MVP", $"대형압연 작업지시 서비스 - {messageType}" };
         }
+
+        [HttpPost]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public IEnumerable<string> Post()
+        {
+            return new string[] { "MES MVP", "대형압연 작업지시 서비스" };
+        }
     }
 }
