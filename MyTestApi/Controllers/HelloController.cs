@@ -36,9 +36,9 @@ namespace MyTestApi.Controllers
         /// <returns></returns>
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public IEnumerable<string> Get()
+        public IEnumerable<string> Get([FromQuery] string messageType)
         {
-            return new string[] { "MES MVP", "대형압연 작업지시 서비스" };
+            return new string[] { "MES MVP", $"대형압연 작업지시 서비스 - {messageType}" };
         }
     }
 }
