@@ -40,5 +40,11 @@ namespace MyTestApi.Controllers
         {
             return new string[] { "MES MVP", $"대형압연 작업지시 서비스 - {messageType}" };
         }
+
+        [HttpDelete("messageID")]
+        public IEnumerable<string> Delete([FromRoute] string messageID)
+        {
+            return new string[] { "MES MVP", $"대형압연 작업지시 서비스 - {messageID}" };
+        }
     }
 }
