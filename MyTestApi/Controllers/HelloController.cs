@@ -53,5 +53,10 @@ namespace MyTestApi.Controllers
         {
             return new string[] { "MES MVP", $"대형압연 작업지시 서비스 - {messageID}" };
         }
+
+        private bool CheckDelete()
+        {
+            return true;
+        }
     }
 }
