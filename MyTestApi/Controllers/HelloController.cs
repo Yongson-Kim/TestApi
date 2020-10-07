@@ -63,5 +63,9 @@ namespace MyTestApi.Controllers
         {
             return true;
         }
+        private decimal ComputeSalesWgt()
+        {
+            return 100;
+        }
     }
 }
