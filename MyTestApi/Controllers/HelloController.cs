@@ -38,8 +38,7 @@ namespace MyTestApi.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         public IEnumerable<string> Get([FromQuery] string messageType)
         {
-            // mj작업 - 소스를 변경하고, 커밋
-            // yk작업1
+            // 소스를 변경하고, 커밋
             return new string[] { "MES MVP", $"대형압연 작업지시 서비스 - {messageType}" };
         }
 
@@ -47,15 +46,14 @@ namespace MyTestApi.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         public IEnumerable<string> Post()
         {
-            // mj작업 - 소스를 변경하고, 커밋2
-            // yk작업2
+            // 소스를 변경하고, 커밋2
             return new string[] { "MES MVP", "대형압연 작업지시 서비스" };
         }
 
         [HttpDelete("messageID")]
         public IEnumerable<string> Delete([FromRoute] string messageID)
         {
-            // mj작업 - 소스를 변경하고, 커밋3
+            // 소스를 변경하고, 커밋3
             return new string[] { "MES MVP", $"대형압연 작업지시 서비스 - {messageID}" };
         }
 
@@ -65,7 +63,9 @@ namespace MyTestApi.Controllers
         }
         private decimal ComputeSalesWgt()
         {
-            return 100;
+            decimal totalWgt = 100 * 2000;
+
+            return totalWgt;
         }
     }
 }
